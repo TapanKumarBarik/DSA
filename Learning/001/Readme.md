@@ -1,4 +1,9 @@
-#Class 1
+#Class 5
+
+
+## Sum of n natural  number=n(n+1)/2
+
+
 
 ## Sum of n natural whole number= n(n-1)/2
 
