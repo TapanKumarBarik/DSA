@@ -35,3 +35,30 @@ Example Output:
     1
 Explanation:
     only 2 have a strictly smaller and strictly greater element, 1 and 3 respectively.
+        
+        
+        //////////////////////////////////
+        public class Solution {
+    public int solve(int[] A) {
+        
+        
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
+        
+        for(int i=0;i<A.length;i++){
+            max=Math.max(max,A[i]);
+            min=Math.min(min,A[i]);
+        }
+        
+        int count=0;
+        
+        for(int i=0;i<A.length;i++){
+            
+            if(A[i]!=max && A[i]!=min){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
