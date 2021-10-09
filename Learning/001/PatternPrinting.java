@@ -64,3 +64,17 @@ Explanation 2:
                              1 2 3 0
                              1 2 3 4
  So we will return it as two-dimensional array.
+                              
+   //////////////////////
+     public class Solution {
+    public int[][] solve(int A) {
+        int [][]arr=new int[A][A];
+        for(int i=0;i<arr.length;i++){
+             for(int j=0;j<=i;j++){
+                     arr[i][j]=j+1;
+        }
+        }
+        return arr;
+    }
+}
+
