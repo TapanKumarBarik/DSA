@@ -32,3 +32,17 @@ public class HelloWorld {
 }
 //////
 
+import java.util.Date;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+     
+   for(int i=1;i*i<=49;i++){
+     if(i*i==49){
+       System.out.println(i);
+       break;
+     }
+   }
+   
+    }
+}
