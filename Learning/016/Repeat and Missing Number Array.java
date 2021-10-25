@@ -52,4 +52,36 @@ public class Solution {
 
 
 ////
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int[] repeatedNumber(final int[] Arr) {
+        
+        long dup=0;
+        long miss=0;
+        int A=Arr.length;
+        long res1=(long)A*(A+1)/2;
+        long res2=0;
+        for(int i=0;i<A;i++){
+             res2+=Arr[i];
+        }
+        long diff1=res2- res1;//dup-miss
+        
+        long sres1=(long)A*(A+1)*(2*A+1)/6;
+        long sres2=0;
+        
+        for(int i=0;i<A;i++){
+            sres2+= (long)Arr[i]*Arr[i];
+        }
+        
+        long diff2=( sres2-sres1)/diff1;//dup+miss
+        
+        dup=(diff1+diff2)/2;
+        
+        miss=(diff2-diff1)/2;
+        
+        
+        
+        return new int[]{(int)dup,(int)miss};
+    }
+}
 
