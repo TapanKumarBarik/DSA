@@ -74,3 +74,37 @@ Explanation 2:
     }
 }
 ////////////////////////////
+
+
+
+public class Solution {
+    public int solve(int[] A) {
+        
+        int res=0;
+        Arrays.sort(A);
+        
+        // for(int i=0;i<A.length;i++){
+        //     res=res+A[i];
+        // }
+        // int cSum=res;
+        // for(int i=A.length-2;i>=0;i--){
+        //     cSum=cSum-A[i+1];
+        //     //System.out.println(cSum);
+        //     res=res+cSum;
+        // }
+        // return res;
+        
+        
+        
+        
+        //Approach 2
+        
+        
+        for(int i=0;i<A.length;i++){
+            
+            res+=A[i]*(A.length-i);
+        }
+        return res;
+    }
+}
+
