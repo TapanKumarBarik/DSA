@@ -1,3 +1,5 @@
+https://www.hackerearth.com/practice/notes/get-the-modulo-of-a-very-large-number-that-cannot-be-stored-in-any-data-type-in-cc-1/
+
 Problem Description
 You are given a huge number in the form of a string A where each character denotes a digit of the number.
 You are also given a number B. You have to find out the value of A % B and return it.
