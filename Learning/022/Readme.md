@@ -33,11 +33,11 @@ Adding characters to the string :
 
 
 
-ASCII Table
+```ASCII Table
 Introducton	I adapted this information from a web site and I have made it available locally.
-ASCII stands for American Standard Code for Information Interchange. Below is the ASCII character table, including descriptions of the first 32 characters. ASCII was originally designed for use with teletypes, and so the descriptions are somewhat obscure and their use is frequently not as intended.
+ASCII stands for American Standard Code for Information Interchange. Below is the ASCII character table, including descriptions of the first 32 characters. ASCII was originally designed for use with teletypes, and so the descriptions are somewhat obscure and their use is frequently not as intended.```
 
-Java actually uses Unicode, which includes ASCII and other characters from languages around the world.
+``Java actually uses Unicode, which includes ASCII and other characters from languages around the world.``
 
 ASCII Table
 Dec  = Decimal Value
@@ -48,7 +48,7 @@ if we write '5'-'0' it evaluates to 53-48, or the int 5
 if we write char c = 'B'+32; then c stores 'b'
 
 
-Dec  Char                           Dec  Char     Dec  Char     Dec  Char
+``` Dec  Char                           Dec  Char     Dec  Char     Dec  Char
 ---------                           ---------     ---------     ----------
   0  NUL (null)                      32  SPACE     64  @         96  `
   1  SOH (start of heading)          33  !         65  A         97  a
@@ -81,4 +81,4 @@ Dec  Char                           Dec  Char     Dec  Char     Dec  Char
  28  FS  (file separator)            60  <         92  \        124  |
  29  GS  (group separator)           61  =         93  ]        125  }
  30  RS  (record separator)          62  >         94  ^        126  ~
- 31  US  (unit separator)            63  ?         95  _        127  DEL
+ 31  US  (unit separator)            63  ?         95  _        127  DEL```
