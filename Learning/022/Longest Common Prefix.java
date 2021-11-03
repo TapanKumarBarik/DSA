@@ -52,13 +52,10 @@ Longest common prefix of all the strings is "ab".
   
   
   
-  
+## Using sorting
   
   public class Solution {
     public String longestCommonPrefix(String[] A) {
-        
-        
-        
         
         String s="";
         
