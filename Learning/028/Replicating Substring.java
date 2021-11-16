@@ -102,3 +102,28 @@ Explanation 2:
 
 
 
+
+
+
+
+public class Solution {
+    public int solve(int A, String B) {
+        
+        int[]arr=new int[26];
+        
+        
+        for(int i=0;i<B.length();i++){
+            
+            arr[B.charAt(i)-'a']++;
+        }
+        
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=0 && arr[i]%A!=0){
+                return -1;
+            }
+        }
+        return 1;
+    }
+}
+
+
