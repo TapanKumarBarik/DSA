@@ -82,3 +82,54 @@ int Solution::solve(vector<string> &A, string B) {
     }
     return 1;
 }
+
+
+
+
+
+
+
+
+
+
+public class Solution {
+    public int solve(String[] A, String B) {
+        
+        
+        int[]arr=new int[26];
+        
+        for(int i=0;i<B.length();i++){
+            arr[B.charAt(i)-'a']=i;
+        }
+        
+        for(int j=0;j<A.length-1;j++){
+            
+            String temp1=A[j];
+            String temp2=A[j+1];
+            int flag=0;
+          
+            
+        for(int i=0;i<Math.min(temp1.length(),temp2.length());i++){
+            if(temp1.charAt(i)!=temp2.charAt(i)){
+                
+            if(arr[temp1.charAt(i)-'a']>arr[temp2.charAt(i)-'a']){
+               return 0;
+            }
+            flag=1;
+            break;
+            }
+        }
+        if(flag==0 && temp1.length()>temp2.length()){
+           return 0;
+        }
+
+        }
+        return 1;
+    }
+    
+   
+    
+    
+}
+
+
