@@ -1,7 +1,10 @@
 OOPS
 
 
-Abstraction
-Encapsulation
-Inheritance
-Polymorphism
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphism
+
+
+Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield. 
