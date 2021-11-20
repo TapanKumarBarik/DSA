@@ -50,3 +50,42 @@ class TataNano extends Car {
   }
 
 }
+//
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//Interface is another way of achieving abstraaction
+
+//Umlike class we dont use extents keyword but we use implements Interface
+
+public class Interfaces implements Car {
+  public static void main(String[] args) {
+    Interfaces c1 = new Interfaces();
+    c1.walk();
+    c1.start();
+
+  }
+
+  @Override
+  public void start() {
+    // TODO Auto-generated method stub
+    System.out.println("Jusr start me ");
+
+  }
+
+  @Override
+  public void walk() {
+    // TODO Auto-generated method stub
+    System.out.println("I can walk");
+
+  }
+}
+
+// sho=uld start with interface keyword
+interface Car {
+  void start();
+
+  // by default methods are public and abstract
+  // like void start=public abstract void start
+  void walk();
+}
