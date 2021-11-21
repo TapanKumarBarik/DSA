@@ -30,7 +30,19 @@ A straightforward solution using O(mn) space is probably a bad idea.
 A simple improvement uses O(m + n) space, but still not the best solution.
 Could you devise a constant space solution?
   
+  solution
   
+  brute force 
+  
+  1. Iterate through the matrix and check if a certain value is 0 , again iterate through the same row and column and change its corresponding value to a unique number . we cannot make it 0 as it can happen some other issues like it can influence other results.
+   
+   better
+   1. take a auxilary row and auxilary column and change  while iterating the values and store zero .
+    
+    optimal
+    1. instead of taking auxilary arrays , try to add the values in the 0th row and oth column.
+     2. take a flap for oth row specially
+     3. at last iterate from the last and change values .
   
   
   
