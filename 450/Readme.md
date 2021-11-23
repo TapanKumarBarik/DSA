@@ -77,63 +77,117 @@ Array	Median of 2 sorted arrays of different size
 	
 # Matrix
 
-Matrix	Spiral traversal on a Matrix
+Matrix	Spiral traversal on a Matrix  
+
 Matrix	Search an element in a matriix
+
 Matrix	Find median in a row wise sorted matrix
+
 Matrix	Find row with maximum no. of 1's
+
 Matrix	Print elements in sorted order using row-column wise sorted matrix
+
 Matrix	Maximum size rectangle
+
 Matrix	Find a specific pair in matrix
+
 Matrix	Rotate matrix by 90 degrees
+
 Matrix	Kth smallest element in a row-cpumn wise sorted matrix
+
 Matrix	Common elements in all rows of a given matrix
 	
-	
+# String	
+
 String	Reverse a String
+
 String	Check whether a String is Palindrome or not
+
 String	Find Duplicate characters in a string
+
 String	Why strings are immutable in Java?
+
 String	Write a Code to check whether one string is a rotation of another
+
 String	Write a Program to check whether a string is a valid shuffle of two strings or not
+
 String	Count and Say problem
+
 String	Write a program to find the longest Palindrome in a string.[ Longest palindromic Substring]
+
 String	Find Longest Recurring Subsequence in String
+
 String	Print all Subsequences of a string.
+
 String	Print all the permutations of the given string
+
 String	Split the Binary string into two substring with equal 0’s and 1’s
+
 String	Word Wrap Problem [VERY IMP].
+
 String	EDIT Distance [Very Imp]
+
 String	Find next greater number with same set of digits. [Very Very IMP]
+
 String	Balanced Parenthesis problem.[Imp]
+
 String	Word break Problem[ Very Imp]
+
 String	Rabin Karp Algo
+
 String	KMP Algo
+
 String	Convert a Sentence into its equivalent mobile numeric keypad sequence.
+
 String	Minimum number of bracket reversals needed to make an expression balanced.
+
 String	Count All Palindromic Subsequence in a given String.
+
 String	Count of number of given string in 2D character array
+
 String	Search a Word in a 2D Grid of characters.
+
 String	Boyer Moore Algorithm for Pattern Searching.
+
 String	Converting Roman Numerals to Decimal
+
 String	Longest Common Prefix
+
 String	Number of flips to make binary string alternate
+
 String	Find the first repeated word in string.
+
 String	Minimum number of swaps for bracket balancing.
+
 String	Find the longest common subsequence between two strings.
+
 String	Program to generate all possible valid IP addresses from given  string.
+
 String	Write a program tofind the smallest window that contains all characters of string itself.
+
 String	Rearrange characters in a string such that no two adjacent are same
+
 String	Minimum characters to be added at front to make string palindrome
+
 String	Given a sequence of words, print all anagrams together
+
 String	Find the smallest window in a string containing all characters of another string
+
 String	Recursively remove all adjacent duplicates
+
 String	String matching where one string contains wildcard characters
+
 String	Function to find Number of customers who could not get a computer
+
 String	Transform One String to Another using Minimum Number of Given Operation
+
 String	Check if two given strings are isomorphic to each other
+
 String	Recursively print all sentences that can be formed from list of word lists
 	
 	
+# Searching and Sorting
+
 Searching & Sorting	Find first and last positions of an element in a sorted array
 Searching & Sorting	Find a Fixed Point (Value equal to index) in a given array
 Searching & Sorting	Search in a rotated sorted array
