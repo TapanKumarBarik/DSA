@@ -1,7 +1,7 @@
 	Questions by Love Babbar:
 	Youtube Channel: https://www.youtube.com/channel/UCQHLxxBFrbfdrk1jF0moTpw 
 	
-Topic:	Problem: 
+# Topic:	Problem: 
 	
 Array	Reverse the array
 Array	Find the maximum and minimum element in an array
@@ -40,7 +40,8 @@ Array	Minimum no. of operations required to make an array palindrome
 Array	Median of 2 sorted arrays of equal size
 Array	Median of 2 sorted arrays of different size
 	
-	
+# Matrix
+
 Matrix	Spiral traversal on a Matrix
 Matrix	Search an element in a matriix
 Matrix	Find median in a row wise sorted matrix
