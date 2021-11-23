@@ -189,178 +189,342 @@ String	Recursively print all sentences that can be formed from list of word list
 # Searching and Sorting
 
 Searching & Sorting	Find first and last positions of an element in a sorted array
+
 Searching & Sorting	Find a Fixed Point (Value equal to index) in a given array
+
 Searching & Sorting	Search in a rotated sorted array
+
 Searching & Sorting	square root of an integer
+
 Searching & Sorting	Maximum and minimum of an array using minimum number of comparisons
+
 Searching & Sorting	Optimum location of point to minimize total distance
+
 Searching & Sorting	Find the repeating and the missing
+
 Searching & Sorting	find majority element
+
 Searching & Sorting	Searching in an array where adjacent differ by at most k
+
 Searching & Sorting	find a pair with a given difference
+
 Searching & Sorting	find four elements that sum to a given value
+
 Searching & Sorting	maximum sum such that no 2 elements are adjacent
+
 Searching & Sorting	Count triplet with sum smaller than a given value
+
 Searching & Sorting	merge 2 sorted arrays
+
 Searching & Sorting	print all subarrays with 0 sum
+
 Searching & Sorting	Product array Puzzle
+
 Searching & Sorting	Sort array according to count of set bits
+
 Searching & Sorting	minimum no. of swaps required to sort the array
+
 Searching & Sorting	Bishu and Soldiers
+
 Searching & Sorting	Rasta and Kheshtak
+
 Searching & Sorting	Kth smallest number again
+
 Searching & Sorting	Find pivot element in a sorted array
+
 Searching & Sorting	K-th Element of Two Sorted Arrays
+
 Searching & Sorting	Aggressive cows
+
 Searching & Sorting	Book Allocation Problem
+
 Searching & Sorting	EKOSPOJ:
+
 Searching & Sorting	Job Scheduling Algo
+
 Searching & Sorting	Missing Number in AP
+
 Searching & Sorting	Smallest number with atleastn trailing zeroes infactorial
+
 Searching & Sorting	Painters Partition Problem:
+
 Searching & Sorting	ROTI-Prata SPOJ
+
 Searching & Sorting	DoubleHelix SPOJ
+
 Searching & Sorting	Subset Sums
+
 Searching & Sorting	Findthe inversion count
+
 Searching & Sorting	Implement Merge-sort in-place
+
 Searching & Sorting	Partitioning and Sorting Arrays with Many Repeated Entries
-	
+
+# LinkedList	
 	
 LinkedList	Write a Program to reverse the Linked List. (Both Iterative and recursive)
+
 LinkedList	Reverse a Linked List in group of Given Size. [Very Imp]
+
 LinkedList	Write a program to Detect loop in a linked list.
+
 LinkedList	Write a program to Delete loop in a linked list.
+
 LinkedList	Find the starting point of the loop. 
+
 LinkedList	Remove Duplicates in a sorted Linked List.
+
 LinkedList	Remove Duplicates in a Un-sorted Linked List.
+
 LinkedList	Write a Program to Move the last element to Front in a Linked List.
+
 LinkedList	Add “1” to a number represented as a Linked List.
+
 LinkedList	Add two numbers represented by linked lists.
+
 LinkedList	Intersection of two Sorted Linked List.
+
 LinkedList	Intersection Point of two Linked Lists.
+
 LinkedList	Merge Sort For Linked lists.[Very Important]
+
 LinkedList	Quicksort for Linked Lists.[Very Important]
+
 LinkedList	Find the middle Element of a linked list.
+
 LinkedList	Check if a linked list is a circular linked list.
+
 LinkedList	Split a Circular linked list into two halves.
+
 LinkedList	Write a Program to check whether the Singly Linked list is a palindrome or not.
+
 LinkedList	Deletion from a Circular Linked List.
+
 LinkedList	Reverse a Doubly Linked list.
+
 LinkedList	Find pairs with a given sum in a DLL.
+
 LinkedList	Count triplets in a sorted DLL whose sum is equal to given value “X”.
+
 LinkedList	Sort a “k”sorted Doubly Linked list.[Very IMP]
+
 LinkedList	Rotate DoublyLinked list by N nodes.
+
 LinkedList	Rotate a Doubly Linked list in group of Given Size.[Very IMP]
+
 LinkedList	Can we reverse a linked list in less than O(n) ?
+
 LinkedList	Why Quicksort is preferred for. Arrays and Merge Sort for LinkedLists ?
+
 LinkedList	Flatten a Linked List
+
 LinkedList	Sort a LL of 0's, 1's and 2's
+
 LinkedList	Clone a linked list with next and random pointer
+
 LinkedList	Merge K sorted Linked list
+
 LinkedList	Multiply 2 no. represented by LL
+
 LinkedList	Delete nodes which have a greater value on right side
+
 LinkedList	Segregate even and odd nodes in a Linked List
+
 LinkedList	Program for n’th node from the end of a Linked List
+
 LinkedList	Find the first non-repeating character from a stream of characters
-	
+
+# Binary Trees
 	
 Binary Trees	level order traversal
+
 Binary Trees	Reverse Level Order traversal
+
 Binary Trees	Height of a tree
+
 Binary Trees	Diameter of a tree
+
 Binary Trees	Mirror of a tree
+
 Binary Trees	Inorder Traversal of a tree both using recursion and Iteration
+
 Binary Trees	Preorder Traversal of a tree both using recursion and Iteration
+
 Binary Trees	Postorder Traversal of a tree both using recursion and Iteration
+
 Binary Trees	Left View of a tree
+
 Binary Trees	Right View of Tree
+
 Binary Trees	Top View of a tree
+
 Binary Trees	Bottom View of a tree
+
 Binary Trees	Zig-Zag traversal of a binary tree
+
 Binary Trees	Check if a tree is balanced or not
+
 Binary Trees	Diagnol Traversal of a Binary tree
+
 Binary Trees	Boundary traversal of a Binary tree
+
 Binary Trees	Construct Binary Tree from String with Bracket Representation
+
 Binary Trees	Convert Binary tree into Doubly Linked List
+
 Binary Trees	Convert Binary tree into Sum tree
+
 Binary Trees	Construct Binary tree from Inorder and preorder traversal
+
 Binary Trees	Find minimum swaps required to convert a Binary tree into BST
+
 Binary Trees	Check if Binary tree is Sum tree or not
+
 Binary Trees	Check if all leaf nodes are at same level or not
+
 Binary Trees	Check if a Binary Tree contains duplicate subtrees of size 2 or more [ IMP ]
+
 Binary Trees	Check if 2 trees are mirror or not
+
 Binary Trees	Sum of Nodes on the Longest path from root to leaf node 
+
 Binary Trees	Check if given graph is tree or not.  [ IMP ]
+
 Binary Trees	Find Largest subtree sum in a tree
+
 Binary Trees	Maximum Sum of nodes in Binary tree such that no two are adjacent 
+
 Binary Trees	Print all "K" Sum paths in a Binary tree
+
 Binary Trees	Find LCA in a Binary tree
+
 Binary Trees	Find distance between 2 nodes in a Binary tree
+
 Binary Trees	Kth Ancestor of node in a Binary tree
+
 Binary Trees	Find all Duplicate subtrees in a Binary tree [ IMP ]
+
 Binary Trees	Tree Isomorphism Problem
 	
-	
+# Binary Search Trees
+
 Binary Search Trees	Fina a value in a BST
+
 Binary Search Trees	Deletion of a node in a BST
+
 Binary Search Trees	Find min and max value in a BST
+
 Binary Search Trees	Find inorder successor and inorder predecessor in a BST
+
 Binary Search Trees	Check if a tree is a BST or not 
+
 Binary Search Trees	Populate Inorder successor of all nodes
+
 Binary Search Trees	Find LCA  of 2 nodes in a BST
+
 Binary Search Trees	Construct BST from preorder traversal
+
 Binary Search Trees	Convert Binary tree into BST
+
 Binary Search Trees	Convert a normal BST into a Balanced BST
+
 Binary Search Trees	Merge two BST [ V.V.V>IMP ]
+
 Binary Search Trees	Find Kth largest element in a BST
+
 Binary Search Trees	Find Kth smallest element in a BST
+
 Binary Search Trees	Count pairs from 2 BST whose sum is equal to given value "X"
+
 Binary Search Trees	Find the median of BST in O(n) time and O(1) space
+
 Binary Search Trees	Count BST ndoes that lie in a given range
+
 Binary Search Trees	Replace every element with the least greater element on its right
+
 Binary Search Trees	Given "n" appointments, find the conflicting appointments
+
 Binary Search Trees	Check preorder is valid or not
+
 Binary Search Trees	Check whether BST contains Dead end
+
 Binary Search Trees	Largest BST in a Binary Tree [ V.V.V.V.V IMP ]
+
 Binary Search Trees	Flatten BST to sorted list
-	
+
+# Greedy	
 	
 Greedy	Activity Selection Problem
+
 Greedy	Job SequencingProblem
+
 Greedy	Huffman Coding
+
 Greedy	Water Connection Problem
+
 Greedy	Fractional Knapsack Problem
+
 Greedy	Greedy Algorithm to find Minimum number of Coins
+
 Greedy	Maximum trains for which stoppage can be provided
+
 Greedy	Minimum Platforms Problem
+
 Greedy	Buy Maximum Stocks if i stocks can be bought on i-th day
+
 Greedy	Find the minimum and maximum amount to buy all N candies
+
 Greedy	Minimize Cash Flow among a given set of friends who have borrowed money from each other
+
 Greedy	Minimum Cost to cut a board into squares
+
 Greedy	Check if it is possible to survive on Island
+
 Greedy	Find maximum meetings in one room
+
 Greedy	Maximum product subset of an array
+
 Greedy	Maximize array sum after K negations
+
 Greedy	Maximize the sum of arr[i]*i
+
 Greedy	Maximum sum of absolute difference of an array
+
 Greedy	Maximize sum of consecutive differences in a circular array
+
 Greedy	Minimum sum of absolute difference of pairs of two arrays
+
 Greedy	Program for Shortest Job First (or SJF) CPU Scheduling
+
 Greedy	Program for Least Recently Used (LRU) Page Replacement algorithm
+
 Greedy	Smallest subset with sum greater than all other elements
+
 Greedy	Chocolate Distribution Problem
+
 Greedy	DEFKIN -Defense of a Kingdom
+
 Greedy	DIEHARD -DIE HARD
+
 Greedy	GERGOVIA -Wine trading in Gergovia
+
 Greedy	Picking Up Chicks
+
 Greedy	CHOCOLA –Chocolate
+
 Greedy	ARRANGE -Arranging Amplifiers
+
 Greedy	K Centers Problem
+
 Greedy	Minimum Cost of ropes
+
 Greedy	Find smallest number with given number of digits and sum of digits
+
 Greedy	Rearrange characters in a string such that no two adjacent are same
+
 Greedy	Find maximum sum possible equal sum of three stacks
-	
+
+# BackTracking	
 	
 BackTracking	Rat in a maze Problem
 BackTracking	Printing all solutions in N-Queen Problem
