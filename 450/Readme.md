@@ -643,73 +643,137 @@ Stacks & Queues	Queue based approach or first non-repeating character in a strea
 
 Stacks & Queues	Next Smaller Element
 
-	
+# Heap
+
 	
 Heap	Implement a Maxheap/MinHeap using arrays and recursion.
+
 Heap	Sort an Array using heap. (HeapSort)
+
 Heap	Maximum of all subarrays of size k.
+
 Heap	“k” largest element in an array
+
 Heap	Kth smallest and largest element in an unsorted array
+
 Heap	Merge “K” sorted arrays. [ IMP ]
+
 Heap	Merge 2 Binary Max Heaps
+
 Heap	Kth largest sum continuous subarrays
+
 Heap	Leetcode- reorganize strings
+
 Heap	Merge “K” Sorted Linked Lists [V.IMP]
+
 Heap	Smallest range in “K” Lists
+
 Heap	Median in a stream of Integers
+
 Heap	Check if a Binary Tree is Heap
+
 Heap	Connect “n” ropes with minimum cost
+
 Heap	Convert BST to Min Heap
+
 Heap	Convert min heap to max heap
+
 Heap	Rearrange characters in a string such that no two adjacent are same.
+
 Heap	Minimum sum of two numbers formed from digits of an array
+
 	
-	
+# Graph
+
 Graph	Create a Graph, print it
+
 Graph	Implement BFS algorithm 
+
 Graph	Implement DFS Algo 
+
 Graph	Detect Cycle in Directed Graph using BFS/DFS Algo 
+
 Graph	Detect Cycle in UnDirected Graph using BFS/DFS Algo 
+
 Graph	Search in a Maze
+
 Graph	Minimum Step by Knight
+
 Graph	flood fill algo
+
 Graph	Clone a graph
+
 Graph	Making wired Connections
-Graph	word Ladder 
+
+Graph	word Ladder
+
 Graph	Dijkstra algo
+
 Graph	Implement Topological Sort 
+
 Graph	Minimum time taken by each job to be completed given by a Directed Acyclic Graph
+
 Graph	Find whether it is possible to finish all tasks or not from given dependencies
+
 Graph	Find the no. of Isalnds
+
 Graph	Given a sorted Dictionary of an Alien Language, find order of characters
+
 Graph	Implement Kruksal’sAlgorithm
+
 Graph	Implement Prim’s Algorithm
+
 Graph	Total no. of Spanning tree in a graph
+
 Graph	Implement Bellman Ford Algorithm
+
 Graph	Implement Floyd warshallAlgorithm
+
 Graph	Travelling Salesman Problem
+
 Graph	Graph ColouringProblem
+
 Graph	Snake and Ladders Problem
+
 Graph	Find bridge in a graph
+
 Graph	Count Strongly connected Components(Kosaraju Algo)
+
 Graph	Check whether a graph is Bipartite or Not
+
 Graph	Detect Negative cycle in a graph
+
 Graph	Longest path in a Directed Acyclic Graph
+
 Graph	Journey to the Moon
+
 Graph	Cheapest Flights Within K Stops
+
 Graph	Oliver and the Game
+
 Graph	Water Jug problem using BFS
+
 Graph	Water Jug problem using BFS
+
 Graph	Find if there is a path of more thank length from a source
+
 Graph	M-ColouringProblem
+
 Graph	Minimum edges to reverse o make path from source to destination
+
 Graph	Paths to travel each nodes using each edge(Seven Bridges)
+
 Graph	Vertex Cover Problem
+
 Graph	Chinese Postman or Route Inspection
+
 Graph	Number of Triangles in a Directed and Undirected Graph
+
 Graph	Minimise the cashflow among a given set of friends who have borrowed money from each other
+
 Graph	Two Clique Problem
-	
+
+
 	
 Trie	Construct a trie from scratch
 Trie	Find shortest unique prefix for every word in a given list
