@@ -60,3 +60,23 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 
 //Approach 2
 
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+ int[] res_array = new int[nums.length];
+    // assign initial variables
+    res_array[0] = 1;
+
+    // calculate the left array
+    for (int i = 1; i < nums.length; i++) {
+      res_array[i] = res_array[i - 1] * nums[i - 1];
+    }
+    int con = 1;
+    for (int i = nums.length - 1; i >= 0; i--) {
+      res_array[i] = res_array[i] * con;
+      con *= nums[i];
+    }
+
+        return res_array;
+    }
+}
