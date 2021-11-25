@@ -97,3 +97,46 @@ No water is trapped.
 ///
 
 //Approach 2
+
+
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int trap(final int[] A) {
+        
+        int max_left=0;
+        int max_right=0;
+        int n=A.length;
+        int left=0;
+        int right=n-1;
+        int res=0;
+        
+        while(left<=right){
+            
+            
+            if(A[left]<=A[right]  ){
+                
+                if(A[left]>max_left ){
+                    max_left=A[left];
+                }
+                else{
+                    res+=max_left-A[left];
+                }
+                left++;
+            }
+            
+            else{
+                    if(A[right]>max_right ){
+                    max_right=A[right];
+                }
+                else{
+                    res+=max_right-A[right];
+                }
+                right--;
+            }
+            
+            
+        }
+        return res;
+    }
+}
+
