@@ -8,7 +8,30 @@ Return : [0, 1]
 All elements in the array are in the range [0, N-1]
 N * N does not overflow for a signed integer
 
-×
+
+import java.lang.*;
+import java.util.*;
+import java.util.Collections;
+public class Solution {
+    public void arrange(ArrayList<Integer> A) {
+        
+        
+        int n=A.size();
+        for(int i=0;i<n;i++){
+            int temp=A.get(i)+ ((A.get(A.get(i)))%n)*n;
+            A.set(i, temp);
+        }
+        
+           for(int i=0;i<n;i++){
+            int temp=A.get(i)/n;
+            A.set(i, temp);
+        }
+    }
+}
+
+
+
+×///////////////////////////////////////////////////////////////////////////////////////////////
 // import java.lang.*;
  import java.util.*;
 // import java.util.Collections;
