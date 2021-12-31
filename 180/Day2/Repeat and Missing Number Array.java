@@ -61,4 +61,74 @@ Note:You only need to implement the given function. Do not read input, instead u
     }
 }
 
+
+
+
+
+
+//////////////////
+
+
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int[] repeatedNumber(final int[] A) {
+        int xor = 0 ;
+
+        for(int i =1 ;i<=A.length ;i++){
+            xor ^= i ;
+        }
+
+        for(int i =0 ; i<A.length ;i++){
+            xor ^= A[i] ;
+        }
+
+        int rmsb = xor & -xor ;
+
+        int f = 0 ;
+        int s = 0 ;
+
+        for(int i =0 ;i<A.length ;i++ ){
+            if((A[i]&rmsb)==0)
+                f ^= A[i] ;
+            else
+                s ^= A[i] ;
+        }
+
+        for(int i = 1 ;i<=A.length ;i++ ){
+            if((i&rmsb)==0)
+                f ^= i ;
+            else
+                s ^= i ;
+        }
+
+        int[] arr = new int[2] ;
+
+        int first = -1 ;
+
+        for(int i = 0 ;i<A.length ;i++ ){
+            if(A[i]==f){
+            first = f ;
+            }
+            if(A[i]==s){
+            first = s ;
+            }
+        }
+        
+
+        if(first==f){
+            arr[0] = first ;
+            arr[1] = s ;
+            return arr ;
+        }
+
+        arr[0] = s ;
+        arr[1] = f ;
+        return arr ;
+
+
+        
+    }
+}
+
+
   
