@@ -51,3 +51,19 @@ class Solution {
         return prev;
     }
 }
+\\\\\\\\\\\
+
+
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        return reverseList(null, head);
+    }
+    
+    private ListNode reverseList(ListNode prev, ListNode current) {
+        if(current == null) return current;
+        ListNode head = current.next != null ? reverseList(current, current.next) : current;
+        current.next = prev;
+        return head;
+    }
+}
