@@ -83,3 +83,32 @@ Explanation 2:
         return ans;
     }
 }
+
+
+//////////////
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int minimize(final int[] A, final int[] B, final int[] C) {
+        
+        int i=0;
+        int j=0;
+        int k=0;
+        int res=Integer.MAX_VALUE;
+        
+        while(i<A.length  && j<B.length && k<C.length){
+            
+            
+            
+            int min=Math.min(A[i],Math.min(B[j],C[k]));
+            int max=Math.max(A[i],Math.max(B[j],C[k]));
+            int diff=max-min;
+            res=Math.min(res,diff);
+            if(res==0)break;
+            if(min==A[i])i++;
+            if(min==B[j])j++;
+            if(min==C[k])k++;
+            
+        }
+        return res;
+    }
+}
