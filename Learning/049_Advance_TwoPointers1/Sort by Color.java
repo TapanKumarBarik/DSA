@@ -80,6 +80,44 @@ Explanation 1:
 ///////////////////////////////
 
 
+public class Solution {
+    public int[] sortColors(int[] A) {
+       //TWO POINTER APPROACH
+       
+       int l=0;
+       int r=A.length-1;
+       for(int i=0;i<=r;){
+           
+           if(A[i]==0){
+               //swap with l
+               //ap(A,i,l);
+                int temp=A[i];
+                A[i]=A[l];
+                A[l]=temp;
+               l++;
+               i++;
+           }
+           
+           else if(A[i]==2){
+               //swap with r
+              //wap(A,i,r);
+                int temp=A[i];
+                A[i]=A[r];
+                A[r]=temp;
+               
+                
+               r--;
+           }
+           
+           else{
+               i++;
+           }
+       }
+       return A;
+
+    }
+}
+
 
 
 
