@@ -108,3 +108,80 @@ Explanation 2:
         
     }
 }
+
+
+
+
+
+
+
+
+import java.util.Arrays;
+
+public class BalanceArray {
+
+    public static void main(String[] args) {
+
+        // Scanner scn = new Scanner(System.in);
+
+        // System.out.println("Enter the size of the array ...");
+        // int n = scn.nextInt();
+        // int[] arr = new int[n];
+        // for (int i = 0; i < n; i++) {
+        // System.out.println("Enter " + i);
+        // arr[i] = scn.nextInt();
+        // }
+        // System.out.println(Arrays.toString(arr));
+
+        //
+        int[] arr = { 2, 1, 6, 4 };
+
+        int evenSum = 0;
+        int oddSum = 0;
+        int res = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                evenSum += arr[i];
+            } else {
+                oddSum += arr[i];
+            }
+        }
+
+        //
+        int kEvenSum = 0;
+        int kOddSum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("------------------------------------");
+
+            if (i % 2 == 0) {
+
+                if (evenSum - (arr[i] + kEvenSum) + kOddSum == (oddSum - kOddSum) + kEvenSum) {
+
+                    res++;
+                }
+                System.out.println("oddSum == " + oddSum);
+                System.out.println("evenSum == " + evenSum);
+                System.out.println("kOddSum == " + kOddSum);
+                System.out.println("kEvenSum == " + kEvenSum);
+                System.out.println("res == " + res);
+
+                kEvenSum += arr[i];
+            } else {
+                if (oddSum - (arr[i] + kOddSum) + kEvenSum == (evenSum - kEvenSum) + kOddSum) {
+                    res++;
+                }
+                System.out.println("oddSum == " + oddSum);
+                System.out.println("evenSum == " + evenSum);
+                System.out.println("kOddSum == " + kOddSum);
+                System.out.println("kEvenSum == " + kEvenSum);
+                System.out.println("res == " + res);
+                kOddSum += arr[i];
+            }
+
+        }
+        System.out.println("The final result is ------....");
+        System.out.println(res);
+
+    }
+}
