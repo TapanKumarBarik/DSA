@@ -65,7 +65,9 @@ Explanation 2:
    
    
    
-   public class Solution {
+   
+  
+  public class Solution {
     public int solve(int[] arr) {
 
     int n=arr.length;
@@ -79,7 +81,7 @@ Explanation 2:
     int res=0;
     
     
-    
+    TreeSet<Integer>set=new TreeSet<Integer>();
     
     set.add(Integer.MIN_VALUE);
     
