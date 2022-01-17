@@ -71,3 +71,22 @@ Only possible answer is [2, 1].
 
 
 
+public class Solution {
+    public int[] wave(int[] A) {
+        
+        Arrays.sort(A);
+        
+        for(int i=0;i<A.length-1;i+=2){
+            
+            int temp=A[i+1];
+            A[i+1]=A[i];
+            A[i]=temp;
+            
+        }
+        return A;
+   
+}
+}
+
+
+
