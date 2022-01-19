@@ -80,4 +80,25 @@ public class Solution {
 
 
 
+//optimized
+
+public class Solution {
+    public int[][] solve(int[] A, int[] B) {
+
+        int[][]arr=new int[B.length][A.length];
+
+        for(int i=0;i<B.length;i++){
+            int toRotate=B[i]%A.length;
+           for(int j=0;j<A.length;j++){
+               arr[i][j]=A[toRotate];
+               toRotate=(toRotate+1)%A.length;
+           }
+        }
+        return arr;
+
+    }
+
+}
+
+
 
