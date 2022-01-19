@@ -1,0 +1,58 @@
+You are given an array of N integers, A1, A2 ,…, AN. Return maximum value of f(i, j) for all 1 ≤ i, j ≤ N.
+
+f(i, j) is defined as |A[i] - A[j]| + |i - j|, where |x| denotes absolute value of x.
+
+For example,
+
+A=[1, 3, -1]
+
+f(1, 1) = f(2, 2) = f(3, 3) = 0
+f(1, 2) = f(2, 1) = |1 - 3| + |1 - 2| = 3
+f(1, 3) = f(3, 1) = |1 - (-1)| + |1 - 3| = 4
+f(2, 3) = f(3, 2) = |3 - (-1)| + |2 - 3| = 5
+
+So, we return 5.
+
+  
+  
+  
+  
+  public class Solution {
+    public int maxArr(int[] A) {
+        
+        int AiPlusi=Integer.MIN_VALUE;
+        
+        int AjPlusj=Integer.MAX_VALUE;
+        
+        int AiMinusi=Integer.MIN_VALUE;
+        
+        int AjMinusj=Integer.MAX_VALUE;
+        
+        
+        
+        
+        for(int i=0;i<A.length;i++){
+            
+            int sum=A[i]+i;
+         AiPlusi=Math.max(sum,AiPlusi);
+         AjPlusj=Math.min(sum,AjPlusj);
+         
+         int diff=A[i]-i;
+         
+         AiMinusi=Math.max(diff,AiMinusi);
+         AjMinusj=Math.min(diff,AjMinusj);
+            
+        }
+        
+        int pos1=AiPlusi-AjPlusj;
+        int pos2=AiMinusi-AjMinusj;
+        
+        return Math.max(pos1,pos2);
+    }
+}
+
+  
+  
+  
+  
+  
