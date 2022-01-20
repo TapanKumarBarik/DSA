@@ -22,6 +22,34 @@ In the above example(Input 1), if we sort the subarray A1, A2, then whole array 
   
   
   //o(1) space approach
+  public class Solution {
+    public int[] subUnsort(int[] arr) {
+int n = arr.length-1;
+    int left = 0, right = n;
+
+    while(left < n && arr[left] <= arr[left+1]) left++;
+    
+    if(left == n) return new int[]{-1};
+
+    while(right >0 && arr[right] >= arr[right-1]) right--;
+
+
+    int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+
+    for(int i = left; i<=right; i++){
+      max = Math.max(max, arr[i]);
+      min = Math.min(min, arr[i]);
+    }
+
+    while(left>0 && arr[left-1] >min) left--;
+    while(right<n && arr[right+1] <max) right++;
+
+    
+    return new int[]{left,right};
+
+    }
+}
+
   
   
 
