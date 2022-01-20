@@ -100,3 +100,24 @@ Explanation 2:
         return s;
     }
 }
+
+
+
+//
+
+public class Solution {
+    public String smallestPrefix(String A, String B) {
+        
+        int m=A.length();
+        int n=B.length();
+        int i=1,j=0;
+        String s="";
+          s+=A.charAt(0);
+        while(i<m   && A.charAt(i)<B.charAt(j) ){
+                 s+=A.charAt(i);
+                 i++;
+        }
+         s+=B.charAt(j);
+        return s;
+    }
+}
