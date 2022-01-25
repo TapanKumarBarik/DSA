@@ -121,3 +121,66 @@ public class Solution {
         
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+    public ListNode reverseBetween(ListNode A, int B, int C) {
+        
+        if(A==null){
+            return A;
+        }
+        
+        ListNode prev=null;
+        ListNode cur=A;
+        
+        while(B>1){
+            prev=cur;
+            cur=cur.next;
+            B--;
+            C--;
+        }
+        
+        
+        ListNode con=prev;
+        ListNode tail=cur;
+        
+        while(C>0){
+            ListNode next=cur.next;
+            cur.next=prev;
+            prev=cur;
+            cur=next;
+            C--;
+        }
+        
+        if(con!=null){
+            con.next=prev;
+        }
+        else{
+            A=prev;
+        }
+        
+        tail.next=cur;
+        
+        return A;
+    }
+}
+
