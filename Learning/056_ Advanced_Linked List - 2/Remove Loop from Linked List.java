@@ -55,6 +55,49 @@ Explanation 2:
    
    
    
+  
+  //Tapan
+  
+  /**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+    public ListNode solve(ListNode A) {
+        
+        if(A==null || A.next==null)return A;
+        
+        ListNode fast=A;
+        ListNode slow=A;
+        ListNode prev=null;
+        
+        while(fast!=null && fast.next.next!=null){
+            
+            fast=fast.next.next;
+            prev=slow;
+            slow=slow.next;
+            if(fast==slow){
+                ListNode temp=A;
+                while(temp!=slow){
+                    
+                    temp=temp.next;
+                    prev=slow;
+                    slow=slow.next;
+                }
+                break;
+            }
+            
+        }
+         prev.next=null;
+         return A;
+        
+    }
+}
+
    
    
    
