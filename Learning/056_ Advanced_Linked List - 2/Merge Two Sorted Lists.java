@@ -119,6 +119,52 @@ public class Solution {
 
 
 
+//optimized
+
+   /**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+    public ListNode mergeTwoLists(ListNode A, ListNode B) {
+        
+        if(A==null)return B;
+        if(B==null)return A;
+        
+      ListNode temp=new ListNode(0);
+      ListNode output=temp;
+      
+      while(A!=null && B!=null){
+          
+          if(A.val>B.val){
+              temp.next=B;
+              temp=temp.next;
+              B=B.next;
+          }
+          else{
+            temp.next=A;
+              temp=temp.next;
+              A=A.next;
+          }
+      }
+      if(A!=null){
+          temp.next=A;
+      }
+      
+      if(B!=null){
+          temp.next=B;
+      }
+      
+      return output.next;
+        
+    }
+}
+
+
 
 
 
