@@ -87,3 +87,32 @@ public class Solution {
     
     }
 }
+
+
+
+
+
+
+
+public class Solution {
+    public int solve(int[] A, int B) {
+  int n = A.length;
+        
+        int start = 0, end = 0; 
+        int count = 0;
+              while(end<n){
+                  B-=A[end];
+                 if(B<=0){
+                      while(B<=0){
+                      B+=A[start++];
+                  }
+                 }
+
+                  count+=end-start+1;
+                  end++;
+              }
+  
+        return count; 
+    
+    }
+}
