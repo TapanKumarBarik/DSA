@@ -20,8 +20,145 @@ Input :
          get(5)        returns -1 
            
            
+		 
+		 
+Steps;
+
+first create a DLL and initialized the constructor
+
+
+declared variables map, head, last and capacity
+
+//capacity
+inilialized capacity
+created head and last
+connect
+
+//get
+
+get the node value wrt to key
+if it is null return -1;
+remove it ;
+insert it again
+return node.val
+
+
+//set;
+
+if key is there in map remove it 
+if capacity is full remove the last item
+
+insert it
+
+
+//insert it
+
+first add it to map;
+
+add in first
+
+//remove
+
+remove from map;
+node.next.prev=node.next;
+node.next.prev=node.prev
+
+		 
+		 
+		 
            
-          
+  public class Solution {
+    
+    
+    //create dll
+    class Node{
+        int key;
+        int value;
+        Node prev;
+        Node next;
+        
+        Node(int k, int v){
+            key=k;
+            value=v;
+        }
+    }
+    //creating space 
+    
+   private HashMap<Integer, Node>map=new HashMap();
+    
+   private Node last;
+    private Node head;
+    private int capacity;
+    
+    public Solution(int capacity) {
+        
+        this.capacity=capacity;
+        last=new Node(0,0);
+        head=new Node(0,0);
+        head.next=last;
+        last.prev=head;
+        
+    }
+    
+    
+    
+    public int get(int key) {
+        
+        Node node=map.get(key);
+        if(node==null){
+            return -1;
+        }
+        remove(node);
+        
+        insert(node);
+        
+        return node.value;
+        
+    }
+    
+    public void set(int key, int value) {
+        
+        if(map.containsKey(key)){
+            remove(map.get(key));
+        }
+        
+        if(map.size()==capacity){
+            remove(last.prev);
+        }
+        insert(new Node(key, value));
+        
+    }
+    
+    private void insert(Node node){
+        
+        //put it on map
+        
+        map.put(node.key,node);
+        
+        Node temp=head.next;
+        
+        head.next=node;
+        node.prev=head;
+        node.next=temp;
+        temp.prev=node;
+        
+    }
+    
+    private void remove(Node node){
+        
+        map.remove(node.key);
+        
+        node.prev.next=node.next;
+        node.next.prev=node.prev;
+    }
+}
+
+		 
+		 
+		 
+		 
+		 
+		 
           
           
   public class Solution {
