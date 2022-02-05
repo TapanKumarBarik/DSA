@@ -55,6 +55,51 @@ Explanation 2:
 
 
 
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode mergeKLists(ArrayList<ListNode> a) {
+	    
+	   PriorityQueue<ListNode>minHeap=new PriorityQueue<>((o1,o2)->o1.val-o2.val);
+
+       ListNode dummy=new ListNode(-1);
+       ListNode head=dummy;
+
+
+       for(ListNode list :a){
+           while(list!=null){
+               minHeap.add(list);
+               list=list.next;
+           }
+       }
+
+
+       while(!minHeap.isEmpty()){
+           dummy.next=minHeap.poll();
+           dummy=dummy.next;
+           dummy.next=null;
+       }
+
+       return head.next;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
 
 
 /**
