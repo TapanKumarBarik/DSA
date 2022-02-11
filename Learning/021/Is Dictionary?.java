@@ -54,6 +54,60 @@ Explanation 2:
  "none" should be present after "no". Return 0.
 
 
+  
+  
+  
+  
+  
+  public class Solution {
+    public int solve(String[] A, String B) {
+        
+      int[]arr=new int[26];
+      int count=1;
+      
+      for(int i=0;i<B.length();i++){
+          arr[B.charAt(i)-'a']=count++;
+      }
+      
+      
+      for(int i=0;i<A.length-1;i++){
+          
+          
+          String curr=A[i];
+          String next=A[i+1];
+          
+          int len=Math.min(curr.length(),next.length());
+          
+          for(int j=0;j<len;j++){
+              
+              
+              if(len!=curr.length() && len==next.length() && curr.startsWith(next)){
+                //  System.out.println("line 24 "+i  );
+                  return 0;
+              }
+              
+              else if(arr[curr.charAt(j)-'a']>arr[next.charAt(j)-'a']){
+                  // System.out.println("line 28 "+i  );
+                  return 0;
+              }
+            else if(arr[curr.charAt(j)-'a']<arr[next.charAt(j)-'a']){
+                   break;
+              }
+          }
+      }
+      
+      
+      return 1;
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  
 
 int Solution::solve(vector<string> &A, string B) {
     int n = A.size();
