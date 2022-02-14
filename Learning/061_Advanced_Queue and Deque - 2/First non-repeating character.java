@@ -97,3 +97,61 @@ Explanation 2:
      
     }
 }
+
+
+
+
+
+
+public class Solution {
+    public String solve(String A) {
+        
+     HashMap<Character,Integer>map=new HashMap();
+     
+     Queue<Character>nonrepetatingCharacter=new ArrayDeque();
+     
+     StringBuilder sb=new StringBuilder();
+     
+     
+     for(int i=0;i<A.length();i++){
+         
+         char curr=A.charAt(i);
+         
+         if(map.containsKey(curr) ){
+             
+            int freq= map.get(curr);
+            map.put(curr,freq+1);
+         }
+         else{
+             map.put(curr,1);
+             nonrepetatingCharacter.add(curr);
+
+         }
+         
+         //checking main logic start
+         
+       while(nonrepetatingCharacter.size()>=1 && map.get(nonrepetatingCharacter.peek()) >1){
+           nonrepetatingCharacter.remove();
+       }   
+       
+        //checking main logic end
+        
+        
+             if(nonrepetatingCharacter.size()>=1){
+                  sb.append(nonrepetatingCharacter.peek());
+             }
+             else{
+                 sb.append("#");
+             }
+         
+     }
+     
+    
+     
+     return sb.toString();
+     
+     
+    }
+}
+
+
