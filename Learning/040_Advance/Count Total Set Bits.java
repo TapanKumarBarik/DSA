@@ -57,6 +57,36 @@ Explanation 2:
 
 
 
+  
+  
+  
+  public class Solution {
+    public int solve(int A) {
+        
+        
+        int n=A+1;
+        int mod=1000000007;
+        
+        int pw=1;
+        int ans=0;
+        
+        while(pw<=n){
+            
+            ans+=(n/(pw*2))*pw;
+            if( (n/pw)%2 ==1){
+                ans+=n%pw;
+            }
+            ans%=mod;
+            pw*=2;
+        }
+    
+        return ans;
+    }
+}
+
+  
+  
+  
    
    
    
