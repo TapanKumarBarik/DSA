@@ -1,4 +1,6 @@
 
+//https://www.codingninjas.com/codestudio/problems/valid-palindrome_2663285?topList=mohammad-fraz-dsa-sheet-problems
+
 public class Solution {
  
 	public static boolean validPalindrome(int n, String s) {
