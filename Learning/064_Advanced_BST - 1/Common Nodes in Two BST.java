@@ -114,4 +114,64 @@ Explanation 2:
                                 
 
 
+                                
+                                
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+public class Solution {
+    public int solve(TreeNode A, TreeNode B) {
+        
+        HashMap<Integer,Integer>map=new HashMap();
+        
+        preOrderTraversal(map, A);
+        
+         preOrderTraversal(map, B);
+         
+         int res=0;
+         int mod=1000000007;
+         for(int key:map.keySet()){
+             
+             int item=map.get(key);
+             if(item ==2){
+                 res+=key;
+                 res=res%mod;
+                 
+             }
+             
+         }
+         
+         return res;
+        
+    }
+    
+    private void preOrderTraversal(HashMap<Integer,Integer>map,TreeNode node){
+        
+        if(node==null){
+            return;
+        }
+        
+        preOrderTraversal(map, node.left);
+        if(map.containsKey(node.val)){
+            int freq=map.get(node.val);
+            map.put(node.val,freq+1);
+        }
+        else{
+            map.put(node.val,1);
+        }
+        preOrderTraversal(map, node.right);
+        
+    }
+}
+
 
