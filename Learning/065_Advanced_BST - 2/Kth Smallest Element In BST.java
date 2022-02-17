@@ -60,6 +60,57 @@ Explanation 2:
 
   
   
+ 
+ 
+ 
+ //optimal
+ 
+ /**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+public class Solution {
+    
+    int k;
+    public int kthsmallest(TreeNode A, int B) {
+        
+  
+         k=B;
+        int res=solve(A);
+   
+        return res;
+    }
+    
+    private int solve(TreeNode A){
+        
+        if(A==null){
+            return -1;
+        }
+        
+       int k1= solve(A.left);
+        if(k==0){
+            return k1;
+        }
+        k--;
+        if(k==0){
+            return A.val;
+        }
+       return  solve(A.right);
+        
+    }
+}
+
+ 
+ 
   
   
   
