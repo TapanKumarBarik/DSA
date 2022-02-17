@@ -65,6 +65,78 @@ which is a valid BST
 
 
 
+
+//optimal
+
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+public class Solution {
+    int first;
+    int second;
+    TreeNode prev;
+    public ArrayList<Integer> recoverTree(TreeNode A) {
+ 
+ 
+     first=0;
+     second=0;
+     prev=null;
+
+        solve( A);
+        
+        ArrayList<Integer>res=new ArrayList();
+        
+        res.add(first);
+        res.add(second);
+        
+        Collections.sort(res);
+        
+        return res;
+
+    }
+    
+    private void solve(TreeNode A){
+        
+        if(A==null){
+            return;
+        }
+         
+        solve( A.left );
+        
+        if(prev!=null && prev.val>A.val){
+            
+            if(first==0){
+               
+                first=prev.val;
+                
+            }
+           
+                second=A.val;
+                
+           
+        
+        }
+         prev=A;
+        // System.out.println(prev.val);
+        solve( A.right);
+    }
+}
+
+
+
+
+
 //brut force
 
 /**
