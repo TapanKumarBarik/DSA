@@ -5,6 +5,7 @@ LeetCode
 ### LeetCode Algorithm
 
 (Notes: "🔒" means you need to buy a book from Leetcode)
+https://github.com/haoel/leetcode/blob/master/README.md
 
 
 | # | Title | Solution | Difficulty |
