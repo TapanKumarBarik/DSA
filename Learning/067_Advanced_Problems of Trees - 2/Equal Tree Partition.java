@@ -71,7 +71,7 @@ Explanation 2:
    
    
    
-   
+   //with SET
    /**
  * Definition for binary tree
  * class TreeNode {
@@ -118,6 +118,76 @@ public class Solution {
         
         long totalSum=ls+rs+A.val;
         set.add(totalSum);
+       
+        
+        return totalSum;
+    }
+}
+
+
+
+//WITH MAP
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+ 
+ //use map
+ // if sum is 0 and it;s frwq is 2 then 1 else 0
+public class Solution {
+   
+    HashMap<Long,Integer>map;
+    public int solve(TreeNode A) {
+        
+        map=new HashMap();
+         long totalSum=solveSum(A);
+        
+        
+        if(totalSum==0)
+        {
+            
+           if( map.get(totalSum)==2)return 1;
+           return 0;
+        }
+        long halfSum=totalSum/2;
+        
+        if(map.containsKey(halfSum)){
+            return 1;
+        }
+        
+        return 0;
+    }
+    
+    private long solveSum(TreeNode A){
+        
+        if(A==null)return 0;
+        // totalSum+=A.val;
+        // set.add(totalSum);
+        long ls=solveSum(A.left);
+        
+        long rs=solveSum(A.right);
+        
+        long totalSum=ls+rs+A.val;
+        
+        if(map.containsKey(totalSum)){
+            
+            int freq=map.get(totalSum);
+            map.put(totalSum,freq+1);
+        }
+        
+        else{
+           map.put(totalSum,1); 
+        }
+        
        
         
         return totalSum;
