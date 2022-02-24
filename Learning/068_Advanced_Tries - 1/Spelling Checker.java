@@ -100,3 +100,106 @@ public class Solution {
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+//Trie
+
+
+
+
+
+public class Solution {
+ 
+    //   final int alphabetSize=26;
+      TrieNode root;
+      
+     class TrieNode{
+         
+         TrieNode[]children=new TrieNode[26];
+         boolean isEndOfWord;
+         
+         public TrieNode(){
+             isEndOfWord=false;
+             
+             for(int i=0;i<26;i++){
+                 children[i]=null;
+                 
+             }
+         }
+     }
+    
+    public ArrayList<Integer> solve(ArrayList<String> A, ArrayList<String> B) {
+        
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+       
+       root =new TrieNode();
+       putAllAToTrie(A);
+       
+       
+       
+       
+        for(int i=0;i<B.size();i++){
+            String curr=B.get(i);
+            
+          //  System.out.println(curr);
+            if( found(curr) ){
+                arr.add(1);
+            }
+            else{
+                arr.add(0);
+            }
+        }
+        return arr;
+    }
+    
+
+    private boolean found(String b){
+        
+        TrieNode curr_node=root;
+        for(int i=0;i<b.length();i++){
+            
+            int index=b.charAt(i)-'a';
+            
+            if(curr_node.children[index]==null){
+                return false;
+            }
+            
+                curr_node=curr_node.children[index];
+        }
+        
+        return (curr_node !=null && curr_node.isEndOfWord);
+        //return true;
+        
+    }
+    
+    private void putAllAToTrie(ArrayList<String>a){
+        for(int i=0;i<a.size();i++){
+            
+            String curr=a.get(i);
+            
+            TrieNode curr_node=root;
+            int index=0;
+            for(int j=0;j<curr.length();j++){
+                
+                index=curr.charAt(j)-'a';
+                
+                if(curr_node.children[index]==null){
+                    curr_node.children[index]=new TrieNode();
+                }
+              
+                    curr_node=curr_node.children[index];
+               
+            }
+            curr_node.isEndOfWord=true;
+        }
+    }
+}
