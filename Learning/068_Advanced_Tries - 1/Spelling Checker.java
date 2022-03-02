@@ -118,88 +118,84 @@ public class Solution {
 
 
 public class Solution {
- 
-    //   final int alphabetSize=26;
-      TrieNode root;
-      
-     class TrieNode{
+    
+    
+    class TrieNode{
+        
+        boolean isEnd=false;
+        
+        TrieNode []children=new TrieNode[26];
+        
+        public TrieNode(){
+            isEnd=false;
+            for(int i=0;i<26;i++){
+                children[i]=null;
+            }
+        }
+    }
+    public ArrayList<Integer> solve(ArrayList<String> A, ArrayList<String> B) {
+         ArrayList<Integer>arr=new  ArrayList<Integer>();
          
-         TrieNode[]children=new TrieNode[26];
-         boolean isEndOfWord;
+         TrieNode root =new TrieNode();
+         TrieNode root1=root;
+         //tree is made;
          
-         public TrieNode(){
-             isEndOfWord=false;
+         for(int i=0;i<A.size();i++){
              
-             for(int i=0;i<26;i++){
-                 children[i]=null;
+             String curr=A.get(i);
+             root=root1;
+             for(int j=0;j<curr.length();j++){
+                 
+                 int num=curr.charAt(j)-'a';
+                 
+                 if(root.children[num]==null){
+                     
+                     TrieNode temp=new TrieNode();
+                     root.children[num]=temp;
+                 }
+                
+                     root=root.children[num];
                  
              }
+             
+             root.isEnd=true;
          }
-     }
-    
-    public ArrayList<Integer> solve(ArrayList<String> A, ArrayList<String> B) {
+         
+         
+         
+         //search;
+         
+         
+         for(int i=0;i<B.size();i++){
+             
+             root=root1;
+             String curr=B.get(i);
+             int flag=1;
+             for(int j=0;j<curr.length();j++){
+                 
+                 int num=curr.charAt(j)-'a';
+                 
+                 if(root.children[num]==null){
+                    
+                     flag=0;
+                     break;
+                 }
+                 else{
+                     root=root.children[num];
+                 }
+                 
+             }
         
-        ArrayList<Integer> arr=new ArrayList<Integer>();
-       
-       root =new TrieNode();
-       putAllAToTrie(A);
-       
-       
-       
-       
-        for(int i=0;i<B.size();i++){
-            String curr=B.get(i);
-            
-          //  System.out.println(curr);
-            if( found(curr) ){
-                arr.add(1);
-            }
-            else{
-                arr.add(0);
-            }
-        }
-        return arr;
-    }
-    
-
-    private boolean found(String b){
+             if(root.isEnd==true  && flag==1 ){
+                 arr.add(1);
+             }
+             else{
+                 arr.add(0);
+             }
+   
+         }
+         
+         return arr;
         
-        TrieNode curr_node=root;
-        for(int i=0;i<b.length();i++){
-            
-            int index=b.charAt(i)-'a';
-            
-            if(curr_node.children[index]==null){
-                return false;
-            }
-            
-                curr_node=curr_node.children[index];
-        }
-        
-        return (curr_node !=null && curr_node.isEndOfWord);
-        //return true;
-        
-    }
-    
-    private void putAllAToTrie(ArrayList<String>a){
-        for(int i=0;i<a.size();i++){
-            
-            String curr=a.get(i);
-            
-            TrieNode curr_node=root;
-            int index=0;
-            for(int j=0;j<curr.length();j++){
-                
-                index=curr.charAt(j)-'a';
-                
-                if(curr_node.children[index]==null){
-                    curr_node.children[index]=new TrieNode();
-                }
-              
-                    curr_node=curr_node.children[index];
-               
-            }
-            curr_node.isEndOfWord=true;
-        }
     }
 }
