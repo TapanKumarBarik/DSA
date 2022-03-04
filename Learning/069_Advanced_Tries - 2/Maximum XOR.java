@@ -51,6 +51,101 @@ Explanation 2:
    
    
    
+  
+  
+  
+  
+  //optimal Trie
+  
+  public class Solution {
+    
+    class TrieNode{
+        
+        TrieNode left;
+        TrieNode right;
+        
+        public TrieNode(){
+            left=null;
+            right=null;
+        }
+    }
+    public int solve(ArrayList<Integer> A) {
+        
+      TrieNode root=new TrieNode();
+      int maxXor=Integer.MIN_VALUE;
+      
+      for(int nums:A){
+          insert(root, nums);
+      }
+      
+      for(int nums:A){
+          maxXor=Math.max(maxXor, getMax(root, nums));
+      }
+      return maxXor;
+    }
+    
+    //insert
+    
+    private void insert(TrieNode root1, int num){
+        
+        TrieNode root=root1;
+        
+        for(int i=31 ;i>=0;i--){
+            
+            int bit=(num>>i)&1;
+            
+            if(bit==0){
+                
+                if(root.left==null){
+                    TrieNode temp=new TrieNode();
+                    root.left=temp;
+                }
+                root=root.left;
+            }
+            else{
+             if(root.right==null){
+                    TrieNode temp=new TrieNode();
+                    root.right=temp;
+                }
+                root=root.right;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    //search
+    
+    private int getMax(TrieNode root1, int num){
+         TrieNode root = root1;
+        int maxXor = 0;
+  
+        for(int i = 31; i >= 0; i--) {
+            int bit = (num>>i) & 1;
+            if(bit == 0) {
+                if(root.right != null) {
+                    root =  root.right;
+                    maxXor += (1<<i);
+                } else {
+                    root = root.left;
+                }
+            } else {
+                if(root.left != null) {
+                    root = root.left;
+                    maxXor += (1<<i);   
+                } else {
+                    root = root.right;
+                }
+            }
+        }
+        
+        return maxXor;
+    }
+    
+}
+
    
    
    
