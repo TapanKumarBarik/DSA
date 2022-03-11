@@ -48,6 +48,72 @@ All the possible permutation of array [1, 2, 3].
   
   
   
+  
+  
+  
+  
+  
+  
+
+public class Solution {
+    public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {
+        
+        ArrayList<ArrayList<Integer>>arr=new ArrayList();
+        
+        solve(A, arr,0);
+        
+        return arr;
+    }
+    
+    private void solve(ArrayList<Integer>A, ArrayList<ArrayList<Integer>>arr, int i){
+        
+        
+        if(i==A.size() ){
+            arr.add (new ArrayList(A) );
+            return;
+        }
+
+        for(int j=i;j<A.size();j++){
+            
+            //swap(A.get(i) ,A.get(j));
+            int temp2=A.get(i);
+            A.set(i, A.get(j) );
+              A.set(j, temp2 );
+              
+            solve(A, arr,i+1);
+            
+              //swap(A.get(i) ,A.get(j));
+            int temp1=A.get(i);
+            A.set(i, A.get(j) );
+            A.set(j, temp1 );
+        }
+    }
+
+}
+
+//Approach 1 -with extra space 
+//o to a 
+
+//Appoach 2
+// if i==n add
+//for loop j=i swap i , j 
+//call func
+//swap
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 //if temp size==a size then push
 //else 
 //if temp has  a a[i] continue;
