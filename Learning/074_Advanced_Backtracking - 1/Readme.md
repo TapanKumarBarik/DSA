@@ -14,7 +14,7 @@ This structure might apply to many other backtracking questions, but here I am j
 
 Subsets : https://leetcode.com/problems/subsets/
 
-public List<List<Integer>> subsets(int[] nums) {
+```public List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
     backtrack(list, new ArrayList<>(), nums, 0);
@@ -29,8 +29,9 @@ private void backtrack(List<List<Integer>> list , List<Integer> tempList, int []
         tempList.remove(tempList.size() - 1);
     }
 }
+```
 Subsets II (contains duplicates) : https://leetcode.com/problems/subsets-ii/
-
+```
 public List<List<Integer>> subsetsWithDup(int[] nums) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
@@ -47,8 +48,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         tempList.remove(tempList.size() - 1);
     }
 } 
+```
 Permutations : https://leetcode.com/problems/permutations/
 
+```
 public List<List<Integer>> permute(int[] nums) {
    List<List<Integer>> list = new ArrayList<>();
    // Arrays.sort(nums); // not necessary
@@ -68,8 +71,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
       }
    }
 } 
+```
 Permutations II (contains duplicates) : https://leetcode.com/problems/permutations-ii/
 
+```
 public List<List<Integer>> permuteUnique(int[] nums) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
@@ -91,8 +96,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         }
     }
 }
+```
 Combination Sum : https://leetcode.com/problems/combination-sum/
 
+```
 public List<List<Integer>> combinationSum(int[] nums, int target) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
@@ -111,8 +118,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         }
     }
 }
+```
 Combination Sum II (can't reuse same element) : https://leetcode.com/problems/combination-sum-ii/
 
+```
 public List<List<Integer>> combinationSum2(int[] nums, int target) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
@@ -133,8 +142,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         }
     }
 } 
+```
 Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
 
+```
 public List<List<String>> partition(String s) {
    List<List<String>> list = new ArrayList<>();
    backtrack(list, new ArrayList<>(), s, 0);
@@ -160,3 +171,4 @@ public boolean isPalindrome(String s, int low, int high){
       if(s.charAt(low++) != s.charAt(high--)) return false;
    return true;
 } 
+```
