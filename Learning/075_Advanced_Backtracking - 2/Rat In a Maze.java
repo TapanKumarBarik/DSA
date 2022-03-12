@@ -64,6 +64,51 @@ Explanation 2:
    
    
    
+         
+         
+         public class Solution {
+    public int[][] solve(int[][] A) {
+        
+        int n=A.length;
+        
+        int[][]res=new int[n][n];
+        
+        backtrack(A, res, 0,0,n);
+        
+        return res;
+    }
+    
+    private boolean backtrack(int[][]A, int[][]res, int i, int j , int n){
+        
+        
+        if(i==n-1 && j==n-1 && A[i][j]==1){
+            res[i][j]=1;
+            return true;
+        }
+        
+        if(i>=0 && i<n && j>=0 && j<n && A[i][j]==1){
+            
+            if(res[i][j]==1)return false;
+            
+            res[i][j]=1;
+            
+            if(backtrack(A, res, i+1,j,n))return true;
+            if(backtrack(A, res, i,j+1,n))return true;
+            if(backtrack(A, res, i-1,j,n))return true;
+            if(backtrack(A, res, i,j-1,n))return true;
+            
+            res[i][j]=0;
+            return false;
+            
+        }
+        return false;
+    }
+}
+
+         
+         
+         
+         
    
    
    public class Solution {
