@@ -46,6 +46,70 @@ Look at the diagrams given in the question.
   
   
   
+  import java.util.*;
+
+public class Solution {
+	public void solveSudoku(char[][] A) {
+	    
+	    int row=0;
+	    int col=0;
+	    solve(A, row, col);
+	}
+	
+	private boolean solve(char[][]A, int row, int col){
+	    col=0;
+	    
+	    for(int i=row;i<9;i++){
+	        for(int j=col;j<9;j++){
+	            
+	            if(A[i][j]!='.'){
+	                continue;
+	            }
+	            
+	            for(char num='1';num<='9';num++){
+	                
+	                if(isValid(A, i, j, num)){
+	                    
+	                    
+	                    A[i][j]=num;
+	                    
+	                    if(solve(A, i, j+1)){
+	                        return true;
+	                    }
+	                    
+	                    A[i][j]='.';
+	                }
+	            }
+	            return false;
+	            
+	        }
+	        
+	    }
+	    return true;
+	}
+	
+	private boolean isValid(char[][]A, int row, int col, char num){
+	    
+	    
+	    int x=(row/3)*3;
+	    
+	    int y=(col/3)*3;
+	    
+	    for(int i=0;i<9;i++){
+	        
+	        if(A[i][col]==num || A[row][i]==num || A[x+i/3][y+i%3]==num	        ){
+	            return false;
+	        }
+	        
+	    }
+	    return true;
+	}
+}
+
+  
+  
+  
+  
   
   
   import java.util.*;
