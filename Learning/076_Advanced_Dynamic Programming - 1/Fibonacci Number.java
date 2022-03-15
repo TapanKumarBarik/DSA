@@ -60,6 +60,60 @@ Explanation 2:
    
    
    
+  
+  import java.lang.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // YOUR CODE GOES HERE
+        // Please take input and print output to standard input/output (stdin/stdout)
+        // DO NOT USE ARGUMENTS FOR INPUTS
+        // E.g. 'Scanner' for input & 'System.out' for output
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        
+        int a=0;
+        int b=1;
+        int c=0;
+        
+        
+        if(n<=1)System.out.println(n);
+        for(int i=2;i<=n;i++){
+            c=a+b;
+            a=b;
+            b=c;
+            
+        }
+        
+        System.out.println(c);
+        
+        // int[] fib = new int[n + 1];
+        // fib[0] = 0;
+        // fib[1] = 1;
+        // for (int i = 2; i <= n; i++)
+        //   fib[i] = fib[i - 1] + fib[i - 2];
+      //  System.out.println(fib[n]);
+        
+        
+        
+        //System.out.println(solve(n));
+        
+    }
+    
+    private static int solve(int n ){
+        
+        if(n<=1)return n;
+        
+        return solve(n-1)+solve(n-2);
+    }
+}
+  
+  
+  
+  
    
    
    
