@@ -32,3 +32,39 @@ class Solution {
          
 
 }
+
+
+
+
+
+
+
+//Approach 2
+
+
+class Solution {
+    void segregate0and1(int[] arr, int n) {
+        // code here
+ int zero=0;
+        int one=0;
+        
+        for(int i:arr){
+            
+            if(i==0)zero++;
+            else one++;
+        }
+        
+        
+        for(int i=0;i<zero;i++){
+            
+            arr[i]=0;
+        }
+        
+        for(int i=0;i<one;i++){
+            arr[i+zero]=1;
+        }
+ 
+          }
+         
+
+}  
