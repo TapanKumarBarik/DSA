@@ -111,3 +111,53 @@ Explanation 2:
       return arr;
     }
 }
+
+
+
+//one for loop
+
+public class Solution {
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        
+      int max1=Integer.MIN_VALUE;
+      
+      int max2=Integer.MIN_VALUE;
+      
+      int n=A.size();
+      
+      
+          for(int i=0;i<n;i++){
+          
+          int curr=A.get(i);
+          
+          if(curr>max1){
+              
+              max2=max1;
+              max1=curr;
+          }
+          else if(curr>max2){
+              max2=curr;
+          }
+          
+      }
+
+              
+          
+      
+    //   System.out.println(max1);
+      
+    //   System.out.println(max2);
+      
+      ArrayList<Integer>arr=new ArrayList();
+      
+      for(int nums:A){
+          
+          if(nums!=max1 && nums!=max2){
+              
+              arr.add(nums);
+          }
+      }
+      return arr;
+    }
+}
+
