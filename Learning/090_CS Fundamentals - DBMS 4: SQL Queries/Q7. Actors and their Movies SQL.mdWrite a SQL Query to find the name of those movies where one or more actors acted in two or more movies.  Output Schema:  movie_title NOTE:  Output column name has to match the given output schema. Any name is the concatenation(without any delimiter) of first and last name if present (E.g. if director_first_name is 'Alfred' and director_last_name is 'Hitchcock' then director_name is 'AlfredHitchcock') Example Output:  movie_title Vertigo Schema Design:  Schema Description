@@ -1,0 +1,35 @@
+Write a SQL Query to find the name of those movies where one or more actors acted in two or more movies.
+
+Output Schema:
+
+movie_title
+NOTE:
+
+Output column name has to match the given output schema.
+Any name is the concatenation(without any delimiter) of first and last name if present
+(E.g. if director_first_name is 'Alfred' and director_last_name is 'Hitchcock' then director_name is 'AlfredHitchcock')
+Example Output:
+
+movie_title
+Vertigo
+Schema Design:
+
+Schema Description
+
+
+https://s3-us-west-2.amazonaws.com/ib-assessment-tests/problem_images/sql_course.jpg
+
+
+```
+SELECT movie_title
+FROM movies 
+JOIN movies_cast
+  ON movies_cast.movie_id=movies.movie_id
+JOIN actors
+  ON movies_cast.actor_id=actors.actor_id
+WHERE actors.actor_id IN (
+SELECT actor_id
+FROM movies_cast
+GROUP BY actor_id HAVING COUNT(*)>=2);
+
+```
