@@ -20,3 +20,27 @@ class Solution {
         return false;
     }
 }
+
+
+
+
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        
+        int num=0;
+        if(x<0)return false;
+        if(x==0)return true;
+        if(x%10==0)return false;
+        
+        while(x>num){
+            int temp=x%10;
+            num*=10;
+            num+=temp;
+            x/=10;
+        }
+        
+        return x==num || x==num/10;
+        
+    }
+}
